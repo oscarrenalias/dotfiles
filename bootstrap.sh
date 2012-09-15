@@ -24,3 +24,6 @@ ln -s $HOME/.dotfiles/$OS/profile $HOME/.profile
 
 echo Installing SSH files
 ln -s $HOME/.dotfiles/ssh $HOME/.ssh
+
+echo Installing Git files
+ln -s $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
