@@ -1,12 +1,12 @@
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
+    # include .bashrc if it exists - Ubuntu may provide additional system-wide stuff here
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
+# set PATH so it includes our bin folder if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
@@ -16,3 +16,6 @@ source $HOME/.dotfiles/git/git-profile
 
 # aliases
 source $HOME/.dotfiles/common/aliases
+
+# preferred editor
+export EDITOR=vi
