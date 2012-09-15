@@ -1,3 +1,5 @@
 *rsa
 *dsa
 *.pub
+acnkey
+known_hosts
