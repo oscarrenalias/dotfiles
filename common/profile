@@ -1,0 +1,27 @@
+# which OS are we running?
+OS=`uname | tr '[A-Z]' '[a-z]'`
+
+# aliases - first general and then specific
+source $HOME/.dotfiles/common/aliases
+
+if [ -f $HOME/.dotfiles/$OS/aliases ]; then
+	. $HOME/.dotfiles/$OS/aliases
+fi
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists - Ubuntu may provide additional system-wide stuff here
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# environment variables, first common and then OS-specific
+source $HOME/.dotfiles/common/env
+
+if [ -f $HOME/.dotfiles/$OS/env ]; then
+	. $HOME/.dotfiles/$OS/env
+fi
+
+# git scripts
+source $HOME/.dotfiles/git/git-profile

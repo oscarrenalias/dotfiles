@@ -1,0 +1,40 @@
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad+
+
+export PATH=/opt/local/bin:/opt/local/sbin:$SCALA_HOME/bin:$PATH:/usr/local/git/bin
+
+#scala settings
+export SCALA_HOME=/Users/oscar/bin/scala
+
+# java
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+# liftweb path vars
+export M2_HOME=/Users/oscar/bin/maven
+export M2=$M2_HOME/bin
+export MAVEN_OPTS="-noverify" 
+# ant
+export ANT_HOME=/Users/oscar/bin/ant
+export ANT_PATH=$ANT_HOME/bin
+export PATH=$M2:$ANT_PATH:$PATH:~/bin/sbt
+# play 2.0
+export PATH=$PATH:~/bin/play-2.0
+export PLAY_HOME=~/bin/play-2.0
+# leiningen
+export PATH=$PATH:~/bin/leiningen
+# gradle
+export GRADLE_HOME=/Users/oscar/bin/gradle
+export PATH=$PATH:$GRADLE_HOME/bin
+# heroku
+export PATH=$PATH:/usr/local/heroku/bin
+# hadoop
+export PATH=$PATH:~/bin/hadoop/bin
+# whirr
+export PATH=$PATH:~/bin/whirr/bin
+
+# torquebox and jruby
+export TORQUEBOX_HOME=$HOME/bin/torquebox-current
+export JBOSS_HOME=$TORQUEBOX_HOME/jboss
+export JRUBY_HOME=$TORQUEBOX_HOME/jruby
+export PATH=$JRUBY_HOME/bin:$PATH
+export CLOJURESCRIPT_HOME=/Users/oscar/Projects/clojurescript
+export PATH=$PATH:/Users/oscar/Projects/clojurescript/bin:~/bin/google-closure

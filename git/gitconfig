@@ -1,3 +1,9 @@
 [user]
 	name = Oscar Renalias
 	email = oscar@renalias.net
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[core]
+	autocrlf = input

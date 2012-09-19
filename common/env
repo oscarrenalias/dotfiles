@@ -1,0 +1,9 @@
+# Common environment variables go here
+
+# set PATH so it includes our bin folder if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# preferred editor
+export EDITOR=vi
