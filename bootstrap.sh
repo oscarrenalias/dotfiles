@@ -1,4 +1,11 @@
 #!/bin/bash
+
+#
+# TODO
+#
+# - some of the code below could be moved to reusable functions
+#
+
 CURFOLDER=`pwd`
 OS=`uname | tr '[A-Z]' '[a-z]'`
 
@@ -11,16 +18,35 @@ ln -s `pwd` $HOME/.dotfiles
 # back things up
 echo Backing things up...
 if [ -f $HOME/.ssh ]; then
+	echo Backing up SSH keys
 	mv $HOME/.ssh $HOME/.ssh.dotfiles-backup
 fi
 
 if [ -f $HOME/.profile ]; then
+	echo Backing up .profile
 	mv $HOME/.profile $HOME/.profile.dotfiles-backup
 fi
 
+if [ -f $HOME/.bash_profile ]; then
+	echo Backing up .bash_profile
+	mv $HOME/.bash_profile $HOME/.bash_profile.dotfiles-backup
+fi
+
+if [ -f $HOME/.gitconfig ]; then
+	echo Backing up .gitconfig
+	mv $HOME/.profile $HOME/.gitconfig.dotfiles-backup
+fi
+
 # configure the new links
-echo Installing bash .profile
-ln -s $HOME/.dotfiles/$OS/profile $HOME/.profile
+if [ -f $HOME/.dotfiles/$OS/profile ]; then
+	echo Installing .profile
+	ln -s $HOME/.dotfiles/$OS/profile $HOME/.profile
+fi
+
+if [ -f $HOME/.dotfiles/$OS/bash_profile ]; then
+	echo Installing .bash_profile
+	ln -s $HOME/.dotfiles/$OS/bash_profile $HOME/.bash_profile
+fi
 
 echo Installing SSH files
 ln -s $HOME/.dotfiles/ssh $HOME/.ssh
