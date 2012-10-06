@@ -1,1 +1,4 @@
 # Environment variables for Linux
+export PLAY_HOME=~/bin/play
+
+export PATH=$PATH:~/bin/play

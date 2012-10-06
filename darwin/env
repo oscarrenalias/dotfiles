@@ -4,7 +4,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad+
 export PATH=/opt/local/bin:/opt/local/sbin:$SCALA_HOME/bin:$PATH:/usr/local/git/bin
 
 #scala settings
-export SCALA_HOME=/Users/oscar/bin/scala
+export SCALA_HOME=$HOME/bin/scala
+export PATH=$PATH:$SCALA_HOME/bin
 
 # java
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
@@ -16,9 +17,9 @@ export MAVEN_OPTS="-noverify"
 export ANT_HOME=/Users/oscar/bin/ant
 export ANT_PATH=$ANT_HOME/bin
 export PATH=$M2:$ANT_PATH:$PATH:~/bin/sbt
-# play 2.0
-export PATH=$PATH:~/bin/play-2.0
-export PLAY_HOME=~/bin/play-2.0
+# Play Framework
+export PATH=$PATH:~/bin/play
+export PLAY_HOME=~/bin/play
 # leiningen
 export PATH=$PATH:~/bin/leiningen
 # gradle
