@@ -34,8 +34,14 @@ fi
 
 if [ -f $HOME/.gitconfig ]; then
 	echo Backing up .gitconfig
-	mv $HOME/.profile $HOME/.gitconfig.dotfiles-backup
+	mv $HOME/.gitconfig $HOME/.gitconfig.dotfiles-backup
 fi
+
+if [ -d $HOME/.emacs.d ]; then
+	echo Backing up .emacs.d
+	mv $HOME/.emacs.d $HOME/.emacs.d.dotfiles-backup
+fi
+
 
 # configure the new links
 if [ -f $HOME/.dotfiles/$OS/profile ]; then
@@ -53,3 +59,6 @@ ln -s $HOME/.dotfiles/ssh $HOME/.ssh
 
 echo Installing Git files
 ln -s $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+
+echo Installing Emacs file
+ln -s $HOME/.dotfiles/emacs $HOME/.emacs.d
