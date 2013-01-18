@@ -61,4 +61,4 @@ echo Installing Git files
 ln -s $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 
 echo Installing Emacs file
-ln -s $HOME/.dotfiles/emacs $HOME/.emacs.d
+ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
