@@ -62,3 +62,12 @@ ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
 
 echo Installing tmux settings
 ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+
+while true; do
+    read -p "Would you like to install the modified keyboard layout for Russian keyboards? [y/n] " yn
+    case $yn in
+        [Yy]* ) echo Installing modified Xmodmap; ln -s $HOME/.dotfiles/linux/Xmodmap $HOME/.Xmodmap; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
