@@ -4,6 +4,9 @@ OS=`uname | tr '[A-Z]' '[a-z]'`
 # aliases - first general and then specific
 source $HOME/.dotfiles/common/aliases
 
+# prompt
+PS1='\[\033[32m\]\u@\h\[\033[00m\] [\[\033[32m\]jobs=\j\[\e[m\]]:\[\033[32m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+
 if [ -f $HOME/.dotfiles/$OS/aliases ]; then
 	. $HOME/.dotfiles/$OS/aliases
 fi
