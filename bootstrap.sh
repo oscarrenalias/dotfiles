@@ -15,33 +15,30 @@ echo Current OS is $OS
 echo Linking this folder to $HOME/.dotfiles
 ln -s `pwd` $HOME/.dotfiles
 
+backup_file()
+{
+    if [ -f $1 ]; then
+	echo Backing up $1
+	# rename and overwrite previous version if exists
+	mv -f $HOME/$1 $HOME/$1.dotfiles-backup
+    fi
+}
+
+backup_folder()
+{
+    if [ -d $1 ]; then
+	echo Backing up $1
+	mv -f $HOME/$1 $HOME/$1.dotfiles-backup
+    fi
+}
+
 # back things up
-echo Backing things up...
-if [ -f $HOME/.ssh ]; then
-	echo Backing up SSH keys
-	mv $HOME/.ssh $HOME/.ssh.dotfiles-backup
-fi
-
-if [ -f $HOME/.profile ]; then
-	echo Backing up .profile
-	mv $HOME/.profile $HOME/.profile.dotfiles-backup
-fi
-
-if [ -f $HOME/.bash_profile ]; then
-	echo Backing up .bash_profile
-	mv $HOME/.bash_profile $HOME/.bash_profile.dotfiles-backup
-fi
-
-if [ -f $HOME/.gitconfig ]; then
-	echo Backing up .gitconfig
-	mv $HOME/.gitconfig $HOME/.gitconfig.dotfiles-backup
-fi
-
-if [ -d $HOME/.emacs.d ]; then
-	echo Backing up .emacs.d
-	mv $HOME/.emacs.d $HOME/.emacs.d.dotfiles-backup
-fi
-
+backup_folder ".ssh"
+backup_file ".profile"
+backup_file ".bash_profile"
+backup_file ".gitconfig"
+backup_folder ".emacs.d"
+backup_file ".tmux.conf"
 
 # configure the new links
 if [ -f $HOME/.dotfiles/$OS/profile ]; then
@@ -62,3 +59,6 @@ ln -s $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 
 echo Installing Emacs file
 ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
+
+echo Installing tmux settings
+ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
