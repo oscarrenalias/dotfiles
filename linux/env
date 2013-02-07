@@ -2,5 +2,3 @@
 export PLAY_HOME=~/bin/play
 
 export PATH=$PATH:~/bin/play:~/bin/groovy/bin:~/bin/grails/bin:~/bin/maven/bin
-
-export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_07
