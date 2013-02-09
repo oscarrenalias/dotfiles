@@ -5,3 +5,4 @@
 (load "puppet-mode-init")
 
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
+(put 'upcase-region 'disabled nil)
