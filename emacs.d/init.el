@@ -11,3 +11,12 @@
 (column-number-mode t)                   ;; show column numbers
 (size-indication-mode t)
 (global-linum-mode t)
+
+(if (eq system-type "darwin")
+    ;; needed in OS X so that I can get curly braces and square brackets
+    (setq default-input-method "MacOSX")
+  (setq mac-command-modifier 'meta
+	mac-option-modifier nil
+	mac-allow-anti-aliasing t
+	mac-command-key-is-meta t)
+)
