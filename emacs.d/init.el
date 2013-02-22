@@ -5,6 +5,7 @@
 (load "puppet-mode-init")
 
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
+(put 'upcase-region 'disabled nil)
 
 ;; show line number and column number
 (line-number-mode t)                     ;; show line numbers

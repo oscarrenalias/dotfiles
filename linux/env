@@ -2,3 +2,12 @@
 export PLAY_HOME=~/bin/play
 
 export PATH=$PATH:~/bin/play:~/bin/groovy/bin:~/bin/grails/bin:~/bin/maven/bin
+
+if [ -f /etc/redhat-release ]; then
+   # RHEL, CentOS, Fedora
+    JAVA_HOME="/usr/java/default/"
+elif [ -f /etc/debian_version ]; then
+    # Debian, Ubuntu
+    JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
+fi
+export JAVA_HOME
