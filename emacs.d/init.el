@@ -1,5 +1,6 @@
 (add-to-list 'load-path' "~/.emacs.d/")
 (add-to-list 'load-path' "~/.emacs.d/puppet")
+(add-to-list 'load-path' "~/.emacs.d/color-theme-6.6.0")
 
 (load "puppet-mode")
 (load "puppet-mode-init")
@@ -21,3 +22,10 @@
 	mac-allow-anti-aliasing t
 	mac-command-key-is-meta t)
 )
+
+;; load the color theme module and set my preferred theme
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-gray30)))
