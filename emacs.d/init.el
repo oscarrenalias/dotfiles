@@ -12,7 +12,8 @@
 (line-number-mode t)                     ;; show line numbers
 (column-number-mode t)                   ;; show column numbers
 (size-indication-mode t)
-(global-linum-mode t)
+(if (fboundp 'global-linum-mode)
+    (global-linum-mode t))
 
 (if (eq system-type "darwin")
     ;; needed in OS X so that I can get curly braces and square brackets
@@ -25,7 +26,16 @@
 
 ;; load the color theme module and set my preferred theme
 (require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-gray30)))
+;; or this one when using it in X
+(if (not (display-graphic-p))
+    (eval-after-load "color-theme"
+      '(progn
+	 (color-theme-initialize)
+	 (color-theme-renegade))))
+;; use this theme when using emacs from the console
+(if (display-graphic-p)
+    (eval-after-load "color-theme"
+      '(progn
+	 (color-theme-initialize)
+	 (require 'color-theme-oscar)
+	 (color-theme-oscar))))
