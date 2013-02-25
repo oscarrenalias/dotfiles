@@ -37,5 +37,5 @@
     (eval-after-load "color-theme"
       '(progn
 	 (color-theme-initialize)
-	 (require 'color-theme-oscar)
+	 (load "color-theme-oscar")
 	 (color-theme-oscar))))
