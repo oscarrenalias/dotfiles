@@ -17,7 +17,7 @@ ln -s `pwd` $HOME/.dotfiles
 
 backup_file()
 {
-    if [ -f $1 ]; then
+    if [ -f $HOME/$1 ]; then
 	echo Backing up $1
 	# rename and overwrite previous version if exists
 	mv -f $HOME/$1 $HOME/$1.dotfiles-backup
@@ -26,7 +26,7 @@ backup_file()
 
 backup_folder()
 {
-    if [ -d $1 ]; then
+    if [ -d $HOME/$1 ]; then
 	echo Backing up $1
 	mv -f $HOME/$1 $HOME/$1.dotfiles-backup
     fi
