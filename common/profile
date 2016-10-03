@@ -17,7 +17,9 @@ if [ -f $HOME/.dotfiles/$OS/aliases ]; then
 fi
 
 # prompt
-export PS1='\[\033[32m\]\u@\h\[\033[00m\] [\[\033[32m\]jobs=\j\[\e[m\]]:\[\033[32m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+#export PS1='\[\033[32m\]\u\[\033[00m\] [\[\033[32m\]jobs=\j\[\e[m\]]:\[\033[32m\]\W\[\033[31m\]$ __git_ps1)\[\033[00m\]\$ '
+
+source $HOME/.dotfiles/common/bash-powertrain.sh
 
 # environment variables, first common and then OS-specific
 source $HOME/.dotfiles/common/env
