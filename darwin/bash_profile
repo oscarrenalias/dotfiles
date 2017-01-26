@@ -1,2 +1,12 @@
 # common parts
 . $HOME/.dotfiles/common/profile
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+ulimit -n 10000
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/oscar.renalias/.sdkman"
+[[ -s "/Users/oscar.renalias/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/oscar.renalias/.sdkman/bin/sdkman-init.sh"

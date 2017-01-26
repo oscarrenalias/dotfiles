@@ -110,7 +110,7 @@ __powerline() {
         #PS1"\[\033[32m\]\W\[\033[31m\] \w $RESET"
 
         # current folder
-        PS1="$BG_CYAN$BOLD\w $RESET"
+        PS1="$BG_CYAN\w $RESET"
 
         # number of background jobs        
         PS1+="$BG_VIOLET (\j) $RESET" 

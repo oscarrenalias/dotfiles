@@ -9,10 +9,6 @@ export PATH=$PATH:$SCALA_HOME/bin
 
 # java
 export JAVA_HOME=`/usr/libexec/java_home`
-# liftweb path vars
-export M2_HOME=/Users/oscar/bin/maven
-export M2=$M2_HOME/bin
-export MAVEN_OPTS="-noverify" 
 # ant
 export ANT_HOME=/Users/oscar/bin/ant
 export ANT_PATH=$ANT_HOME/bin
@@ -32,10 +28,5 @@ export PATH=$PATH:~/bin/hadoop/bin
 # whirr
 export PATH=$PATH:~/bin/whirr/bin
 
-# torquebox and jruby
-export TORQUEBOX_HOME=$HOME/bin/torquebox-current
-export JBOSS_HOME=$TORQUEBOX_HOME/jboss
-export JRUBY_HOME=$TORQUEBOX_HOME/jruby
-export PATH=$JRUBY_HOME/bin:$PATH
 export CLOJURESCRIPT_HOME=/Users/oscar/Projects/clojurescript
 export PATH=$PATH:/Users/oscar/Projects/clojurescript/bin:~/bin/google-closure
