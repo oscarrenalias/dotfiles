@@ -63,6 +63,9 @@ ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
 echo Installing tmux settings
 ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 
+echo Installing zshrc settings
+ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
+
 if [ "$BATCH_MODE" == 1 ]; then
     exit 0
 else
