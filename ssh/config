@@ -8,11 +8,4 @@ Host github.com
 Host innersource.accenture.com
   HostName innersource.accenture.com
   User git
-  IdentityFile ~/.ssh/devsource-id_rsa
-
-
-# Heroku
-Host heroku.com
-  HostName heroku.com
-  User git
-  IdentityFile ~/.ssh/acnkey
+  IdentityFile ~/.ssh/innersource
