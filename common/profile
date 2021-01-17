@@ -30,3 +30,6 @@ fi
 
 # git scripts
 source $HOME/.dotfiles/git/git-profile
+
+# Go stuff
+PATH=$PATH:$HOME/go/bin

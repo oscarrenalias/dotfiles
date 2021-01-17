@@ -47,3 +47,5 @@
 (package-initialize)
 (unless (package-installed-p 'scala-mode2)
   (package-refresh-contents) (package-install 'scala-mode2))
+
+(put 'dired-find-alternate-file 'disabled nil)
