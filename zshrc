@@ -122,3 +122,8 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# to add JVMs to jenv:
+# 1. run: /usr/libexec/java_home -V
+# 2. run: jenv add /Library/Java/JavaVirtualMachines/openjdk-14.0.1.jdk/Contents/Home
+# 3. repeat for as many JVMs installed as needed
