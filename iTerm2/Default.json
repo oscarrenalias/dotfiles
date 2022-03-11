@@ -1,5 +1,9 @@
 {
-  "Transparency" : 0.10857392131979696,
+  "Ansi 7 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527
+  },
   "Tags" : [
 
   ],
@@ -8,11 +12,15 @@
     "Red Component" : 0.3333333432674408,
     "Blue Component" : 1
   },
-  "Normal Font" : "MesloLGMDZ-RegularForPowerline 11",
-  "Ansi 4 Color" : {
-    "Green Component" : 0,
-    "Red Component" : 0,
-    "Blue Component" : 0.73333334922790527
+  "Ansi 8 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 0.3333333432674408,
+    "Blue Component" : 0.3333333432674408
+  },
+  "Ansi 9 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Red Component" : 1,
+    "Blue Component" : 0.3333333432674408
   },
   "Bold Color" : {
     "Green Component" : 1,
@@ -104,7 +112,7 @@
   },
   "Thin Strokes" : 3,
   "Use Italic Font" : true,
-  "Unlimited Scrollback" : false,
+  "Unlimited Scrollback" : true,
   "Keyboard Map" : {
     "0xf700-0x260000" : {
       "Text" : "[1;6A",
@@ -272,7 +280,7 @@
   "Cursor Boost" : 0,
   "Background Image Location" : "",
   "Blur" : true,
-  "Scrollback Lines" : 1000,
+  "Scrollback Lines" : 0,
   "Send Code When Idle" : false,
   "Close Sessions On End" : true,
   "Terminal Type" : "xterm-256color",
@@ -287,21 +295,20 @@
             "path" : "path",
             "maxwidth" : 1.7976931348623157e+308,
             "base: priority" : 5,
+            "base: compression resistance" : 1,
+            "minwidth" : 0,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
               "Blue Component" : 0.63,
               "Alpha Component" : 1,
               "Green Component" : 0.63
-            },
-            "minwidth" : 0,
-            "base: compression resistance" : 1
+            }
           },
           "layout advanced configuration dictionary value" : {
-            "remove empty components" : false,
-            "font" : ".AppleSystemUIFont 12",
             "algorithm" : 0,
-            "auto-rainbow style" : 3
+            "remove empty components" : false,
+            "auto-rainbow style" : 0
           }
         }
       },
@@ -309,17 +316,17 @@
         "class" : "iTermStatusBarJobComponent",
         "configuration" : {
           "knobs" : {
-            "maxwidth" : 1.7976931348623157e+308,
-            "base: priority" : 5,
-            "minwidth" : 0,
             "base: compression resistance" : 1,
+            "base: priority" : 5,
             "shared text color" : {
               "Red Component" : 0.67859999999999998,
               "Color Space" : "sRGB",
               "Blue Component" : 0.63,
               "Alpha Component" : 1,
               "Green Component" : 0.90000000000000002
-            }
+            },
+            "minwidth" : 0,
+            "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
             "remove empty components" : false,
@@ -333,9 +340,8 @@
         "class" : "iTermStatusBarGitComponent",
         "configuration" : {
           "knobs" : {
-            "maxwidth" : 1.7976931348623157e+308,
+            "base: compression resistance" : 1,
             "iTermStatusBarGitComponentPollingIntervalKey" : 5,
-            "base: priority" : 5,
             "shared text color" : {
               "Red Component" : 0.63,
               "Color Space" : "sRGB",
@@ -343,8 +349,9 @@
               "Alpha Component" : 1,
               "Green Component" : 0.72719999999999996
             },
+            "base: priority" : 5,
             "minwidth" : 0,
-            "base: compression resistance" : 1
+            "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
             "remove empty components" : false,
@@ -359,6 +366,7 @@
         "configuration" : {
           "knobs" : {
             "expression" : "⎈\\(user.kubecontext)",
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
@@ -366,7 +374,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.63
             },
-            "base: compression resistance" : 1,
             "base: priority" : 5,
             "minwidth" : "0",
             "maxwidth" : 1.7976931348623157e+308
@@ -412,11 +419,26 @@
     "Red Component" : 0,
     "Blue Component" : 0
   },
+  "Guid" : "FDF63BB1-3459-4FFC-8C2D-F70FD42A546D",
+  "Custom Directory" : "No",
+  "Transparency" : 0.10857392131979696,
+  "Ansi 4 Color" : {
+    "Green Component" : 0,
+    "Red Component" : 0,
+    "Blue Component" : 0.73333334922790527
+  },
+  "Ansi 5 Color" : {
+    "Green Component" : 0,
+    "Red Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527
+  },
+  "Use Non-ASCII Font" : false,
   "Ansi 1 Color" : {
     "Green Component" : 0,
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0
   },
+  "Normal Font" : "MesloLGMDZ-RegularForPowerline 11",
   "Ansi 2 Color" : {
     "Green Component" : 0.73333334922790527,
     "Red Component" : 0,
@@ -427,28 +449,5 @@
     "Red Component" : 0.73333334922790527,
     "Blue Component" : 0
   },
-  "Horizontal Spacing" : 1,
-  "Ansi 5 Color" : {
-    "Green Component" : 0,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527
-  },
-  "Use Non-ASCII Font" : false,
-  "Ansi 7 Color" : {
-    "Green Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527
-  },
-  "Ansi 8 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 0.3333333432674408,
-    "Blue Component" : 0.3333333432674408
-  },
-  "Ansi 9 Color" : {
-    "Green Component" : 0.3333333432674408,
-    "Red Component" : 1,
-    "Blue Component" : 0.3333333432674408
-  },
-  "Guid" : "FDF63BB1-3459-4FFC-8C2D-F70FD42A546D",
-  "Custom Directory" : "No"
+  "Horizontal Spacing" : 1
 }
