@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 # TODO
@@ -13,7 +13,7 @@ echo Current folder is $CURFOLDER
 echo Current OS is $OS
 
 echo Linking this folder to $HOME/.dotfiles
-ln -s `pwd` $HOME/.dotfiles
+ln -s $(pwd) $HOME/.dotfiles
 
 backup_file()
 {
