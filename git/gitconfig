@@ -1,18 +1,24 @@
-[user]
-	name = Oscar Renalias
-	email = oscar@renalias.net
+[init]
+        templatedir = /Users/oscar.renalias/.acn-security-tools/git-template
+        defaultBranch = main
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+        branch = auto
+        diff = auto
+        status = auto
 [core]
-	autocrlf = input
-	excludesfile = /Users/oscar.renalias/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+        autocrlf = input
+        excludesfile = /Users/oscar.renalias/.gitignore_global
 [credential]
-	helper = osxkeychain
+        helper = osxkeychain
+        helper = 
+        helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+        useHttpPath = true
+[filter "lfs"]
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+[user]
+        name = Renalias, Oscar
+        email = oscar.renalias@accenture.com
