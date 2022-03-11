@@ -5,3 +5,5 @@ acnkey
 known_hosts
 deveo
 id_boot2docker
+ssh
+.DS_Store
