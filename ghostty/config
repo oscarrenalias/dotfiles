@@ -1,0 +1,8 @@
+theme = "Abernathy"
+background-opacity = 0.85
+background-blur = true
+font-family = "Roboto Monospace for Powerline"
+copy-on-select = clipboard
+font-size = 11
+shell-integration = zsh
+cursor-style = block
