@@ -21,4 +21,4 @@
         clean = git-lfs clean -- %f
 [user]
         name = Renalias, Oscar
-        email = oscar.renalias@accenture.com
+	email = oscar@renalias.net

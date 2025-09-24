@@ -66,6 +66,9 @@ ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 echo Installing zshrc settings
 ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
 
+echo Installing Ghostty configuration
+ln -s $HOME/.dotfiles/ghostty/config "$HOME/Library/Application Support/Ghostty/config"
+
 if [ "$BATCH_MODE" == 1 ]; then
     exit 0
 else
